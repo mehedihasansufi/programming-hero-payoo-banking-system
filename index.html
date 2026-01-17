@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking System</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-slate-800">
+
+    <section class="max-w-md min-h-screen bg-gray-200 mx-auto py-6  flex flex-col justify-center ">
+
+        <header class="flex  justify-center items-center">
+            <nav class=" mt-40 relative flex justify-center items-center w-9/12 ">
+
+                <img class="w-64 absolute" src="./assets/bg.png" alt="">
+                <img class="w-16 -mt-24 absolute" src="./assets/Group.png" alt="">
+
+            </nav>
+        </header>
+
+
+      
+            <div class="hero-content flex-col lg:flex-row-reverse -mt-4">
+
+                <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-xl">
+                    <form class="card-body rounded-full">
+                        <fieldset class="fieldset">
+                            <label class="label mx-auto">Account Number</label>
+                            <input value="1053886980001" id="account-number"  type="number" class="input rounded-3xl bg-slate-100 focus:outline-none border-none text-center " placeholder="Your account Number" required />
+                            <label class="label mx-auto">PIN</label>
+                            <input value="123" id="pin-number" type="" class="input rounded-3xl bg-slate-100 focus:outline-none border-none outline-none hover:bg-slate-100 text-center" placeholder="Your pin number" required />
+                            <div><a class="link link-hover pl-4">Forgot password?</a></div>
+                            <button id="log-in-btn" class="btn btn-neutral mt-4 rounded-3xl">Login</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+       
+    </section>
+<script src="script/login.js"></script>
+</body>
+
+</html>
