@@ -40,12 +40,12 @@
     </header>
     <!-- container of the main card  -->
     <section class="cash-contianer mt-6 grid grid-cols-3 gap-3">
-      <div id="add-money" class="box  border border-gray-400 rounded-xl p-2 flex flex-col justify-center gap-2">
+      <div id="add-money" class="box cursor-pointer  border border-gray-400 rounded-xl p-2 flex flex-col justify-center gap-2">
         <img class="w-6 mx-auto" src="./assets/wallet1.png" alt="" />
         <p class="text-center text-xs">Add Money</p>
       </div>
 
-      <div class="box border border-gray-400 rounded-xl p-2 flex flex-col justify-center gap-2">
+      <div id="cash-out" class="box cursor-pointer border border-gray-400 rounded-xl p-2 flex flex-col justify-center gap-2">
         <img class="w-6 mx-auto" src="./assets/send1.png" alt="" />
         <p class="text-center text-xs">Cash-out</p>
       </div>
@@ -72,7 +72,7 @@
     </section>
 
     <!-- add money section  -->
-    <section class="add-money-container mt-6">
+    <section id="add-money-container" class=" mt-6">
       <h2 class="font-bold">Add Money</h2>
       <div class="hero-content flex-col lg:flex-row-reverse">
         <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-xl">
@@ -124,9 +124,61 @@
         </div>
       </div>
     </section>
+
+
+    <!-- cash out -->
+
+     <section id="cash-out-container" class=" mt-6">
+      <h2 class="font-bold">Cash Out</h2>
+      <div class="hero-content flex-col lg:flex-row-reverse">
+        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-xl">
+
+          <!-- form -->
+
+          <form class="card-body rounded-full">
+            <fieldset class="fieldset">
+
+              
+
+              <!-- Account agent number -->
+
+              <label class="label text-base">Agent Number</label>
+              <input value="1053886980001" id="cash-out-agent-number" type="number"
+                class="input bg-slate-200 focus:outline-none border-none text-center"
+                placeholder="Enter 11 digit account number" required />
+
+              <!-- Ammount withdraw -->
+
+              <label class="label text-base">Amount</label>
+              <input value="" id="cash-out-withdraw" type="number"
+                class="input bg-slate-200 focus:outline-none border-none text-center" placeholder="Enter amount to withdraw"
+                required />
+
+              <!-- pin -->
+
+              <label class="label text-base">PIN</label>
+              <input value="123" id="cash-out-pin-number" type=""
+                class="input bg-slate-200 focus:outline-none border-none outline-none hover:bg-slate-100 text-center"
+                placeholder="Enter 4 digit pin number" required />
+
+              <!-- add money button -->
+
+              <button id="cash-out-button" class="btn btn-neutral mt-2">
+                withdraw
+              </button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- transfer money -->
   </section>
 
+  <script src="script/moneDisplay.js"></script>
   <script src="script/addMoney.js"></script>
+  <script src="script/cashOut.js"></script>
 </body>
 
 </html>
