@@ -1,170 +1,132 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home page</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@5"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
 
-  <body class="bg-slate-800">
-    <section class="max-w-md min-h-screen mx-auto bg-gray-200 px-8">
-      <header class="pt-6">
-        <nav class="flex justify-between items-center">
-          <div class="img-container">
-            <img class="w-8" src="./assets/Group.png" alt="" />
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home page</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
 
-          <div class="nav-contain flex flex-col gap-2">
-            <h3 class="font-bold text-2xl text-center">$ <span id="main-balance">45000</span></h3>
-            <p class="text-slate-500 border rounded p-1">Available Balance</p>
-          </div>
-
-          <div class="btn-container">
-            <button
-              class="flex gap-2 btn-sm btn rounded-lg bg-gray-200 border-2 border-gray-500 text-slate-400"
-            >
-              <img
-                class="opacity-40"
-                style="height: 20px"
-                src="./assets/log-out.svg"
-                alt=""
-              />
-              Log Out
-            </button>
-          </div>
-        </nav>
-
-        <section class="mt-8">
-          <h2 class="font-bold text-2xl">🔥 Welcome to Payooo!</h2>
-          <p>
-            Enjoy easy and convenient financial services with us. Cashout charge
-            is low and
-          </p>
-        </section>
-      </header>
-      <section class="cash-contianer mt-6 grid grid-cols-3 gap-3">
-        <div
-          id="add-money"
-          class="box border border-gray-400 rounded-xl p-2 flex flex-col justify-center gap-2"
-        >
-          <img class="w-6 mx-auto" src="./assets/wallet1.png" alt="" />
-          <p class="text-center text-xs">Add Money</p>
+<body class="bg-slate-800">
+  <section class="max-w-md min-h-screen mx-auto bg-gray-200 px-8">
+    <header class="pt-6">
+      <nav class="flex justify-between items-center">
+        <div class="img-container">
+          <img class="w-8" src="./assets/Group.png" alt="" />
         </div>
 
-        <div
-          class="box border border-gray-400 rounded-xl p-2 flex flex-col justify-center gap-2"
-        >
-          <img class="w-6 mx-auto" src="./assets/send1.png" alt="" />
-          <p class="text-center text-xs">Cash-out</p>
+        <div class="nav-contain flex flex-col gap-2">
+          <h3 class="font-bold text-2xl text-center">$ <span id="main-balance">45000</span></h3>
+          <p class="text-slate-500 border rounded p-1">Available Balance</p>
         </div>
 
-        <div
-          class="box border border-gray-400 rounded-xl p-2 flex flex-col justify-center gap-2"
-        >
-          <img class="w-6 mx-auto" src="./assets/money1.png" alt="" />
-          <p class="text-center text-xs">Transfer Money</p>
+        <div class="btn-container">
+          <button class="flex gap-2 btn-sm btn rounded-lg bg-gray-200 border-2 border-gray-500 text-slate-400">
+            <img class="opacity-40" style="height: 20px" src="./assets/log-out.svg" alt="" />
+            Log Out
+          </button>
         </div>
+      </nav>
 
-        <div
-          class="box border border-gray-400 rounded-xl p-2 flex flex-col justify-center gap-2"
-        >
-          <img class="w-6 mx-auto" src="./assets/bonus1.png" alt="" />
-          <p class="text-center text-xs">Get Bonus</p>
-        </div>
-
-        <div
-          class="box border border-gray-400 rounded-xl p-2 flex flex-col justify-center gap-2"
-        >
-          <img class="w-6 mx-auto" src="./assets/purse1.png" alt="" />
-          <p class="text-center text-xs">Pay Bill</p>
-        </div>
-
-        <div
-          class="box border border-gray-400 rounded-xl p-2 flex flex-col justify-center gap-2"
-        >
-          <img class="w-6 mx-auto" src="./assets/transaction1.png" alt="" />
-          <p class="text-center text-xs">Transactions</p>
-        </div>
+      <section class="mt-8">
+        <h2 class="font-bold text-2xl">🔥 Welcome to Payooo!</h2>
+        <p>
+          Enjoy easy and convenient financial services with us. Cashout charge
+          is low and
+        </p>
       </section>
+    </header>
+    <!-- container of the main card  -->
+    <section class="cash-contianer mt-6 grid grid-cols-3 gap-3">
+      <div id="add-money" class="box  border border-gray-400 rounded-xl p-2 flex flex-col justify-center gap-2">
+        <img class="w-6 mx-auto" src="./assets/wallet1.png" alt="" />
+        <p class="text-center text-xs">Add Money</p>
+      </div>
 
-      <section class="add-money-container mt-6">
-        <h2 class="font-bold">Add Money</h2>
-        <div class="hero-content flex-col lg:flex-row-reverse">
-          <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-xl">
+      <div class="box border border-gray-400 rounded-xl p-2 flex flex-col justify-center gap-2">
+        <img class="w-6 mx-auto" src="./assets/send1.png" alt="" />
+        <p class="text-center text-xs">Cash-out</p>
+      </div>
 
-            <!-- form -->
+      <div class="box border border-gray-400 rounded-xl p-2 flex flex-col justify-center gap-2">
+        <img class="w-6 mx-auto" src="./assets/money1.png" alt="" />
+        <p class="text-center text-xs">Transfer Money</p>
+      </div>
 
-            <form class="card-body rounded-full">
-              <fieldset class="fieldset">
+      <div class="box border border-gray-400 rounded-xl p-2 flex flex-col justify-center gap-2">
+        <img class="w-6 mx-auto" src="./assets/bonus1.png" alt="" />
+        <p class="text-center text-xs">Get Bonus</p>
+      </div>
 
-                <!-- select bank -->
+      <div class="box border border-gray-400 rounded-xl p-2 flex flex-col justify-center gap-2">
+        <img class="w-6 mx-auto" src="./assets/purse1.png" alt="" />
+        <p class="text-center text-xs">Pay Bill</p>
+      </div>
 
-                <label class="label text-base">Select Bank</label>
-                <select
-                  id="select-bank"
-                  class="select bg-slate-200 focus:outline-none border-none w-full"
-                >
-                  <option value="" disabled selected>Select Bank</option>
-                  <option value="bkash">Bkash</option>
-                  <option value="nagad">Nagad</option>
-                  <option value="dutch-bangla">Dutch Bangla Bank</option>
-                  <option value="islami">Islami Bank</option>
-                </select>
-
-                <!-- Account number -->
-
-                <label class="label text-base">Bank Account Number</label>
-                <input
-                  value="1053886980001"
-                  id="account-number"
-                  type="number"
-                  class="input bg-slate-200 focus:outline-none border-none text-center"
-                  placeholder="Enter 11 digit account number"
-                  required
-                />
-
-                <!-- Ammount add -->
-
-                <label class="label text-base">Amount to Add</label>
-                <input
-                  value=""
-                  id="add-amount"
-                  type="number"
-                  class="input bg-slate-200 focus:outline-none border-none text-center"
-                  placeholder="Add Amount"
-                  required
-                />
-
-                <!-- pin -->
-
-                <label class="label text-base">PIN</label>
-                <input
-                  value="123"
-                  id="pin-number"
-                  type=""
-                  class="input bg-slate-200 focus:outline-none border-none outline-none hover:bg-slate-100 text-center"
-                  placeholder="Your pin number"
-                  required
-                />
-
-                <!-- add money button -->
-
-                <button id="add-money-button" class="btn btn-neutral mt-2">
-                  Add Money
-                </button>
-              </fieldset>
-            </form>
-          </div>
-        </div>
-      </section>
+      <div class="box border border-gray-400 rounded-xl p-2 flex flex-col justify-center gap-2">
+        <img class="w-6 mx-auto" src="./assets/transaction1.png" alt="" />
+        <p class="text-center text-xs">Transactions</p>
+      </div>
     </section>
 
-    <script src="script/addMoney.js"></script>
-  </body>
+    <!-- add money section  -->
+    <section class="add-money-container mt-6">
+      <h2 class="font-bold">Add Money</h2>
+      <div class="hero-content flex-col lg:flex-row-reverse">
+        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-xl">
+
+          <!-- form -->
+
+          <form class="card-body rounded-full">
+            <fieldset class="fieldset">
+
+              <!-- select bank -->
+
+              <label class="label text-base">Select Bank</label>
+              <select id="select-bank" class="select bg-slate-200 focus:outline-none border-none w-full">
+                <option value="" disabled selected>Select Bank</option>
+                <option value="bkash">Bkash</option>
+                <option value="nagad">Nagad</option>
+                <option value="dutch-bangla">Dutch Bangla Bank</option>
+                <option value="islami">Islami Bank</option>
+              </select>
+
+              <!-- Account number -->
+
+              <label class="label text-base">Bank Account Number</label>
+              <input value="1053886980001" id="account-number" type="number"
+                class="input bg-slate-200 focus:outline-none border-none text-center"
+                placeholder="Enter 11 digit account number" required />
+
+              <!-- Ammount add -->
+
+              <label class="label text-base">Amount to Add</label>
+              <input value="" id="add-amount" type="number"
+                class="input bg-slate-200 focus:outline-none border-none text-center" placeholder="Add Amount"
+                required />
+
+              <!-- pin -->
+
+              <label class="label text-base">PIN</label>
+              <input value="123" id="pin-number" type=""
+                class="input bg-slate-200 focus:outline-none border-none outline-none hover:bg-slate-100 text-center"
+                placeholder="Your pin number" required />
+
+              <!-- add money button -->
+
+              <button id="add-money-button" class="btn btn-neutral mt-2">
+                Add Money
+              </button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <script src="script/addMoney.js"></script>
+</body>
+
 </html>

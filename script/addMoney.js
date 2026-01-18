@@ -6,7 +6,7 @@ document.getElementById("add-money-button").
         const accountNumber = document.getElementById("account-number").value;
         const pin = document.getElementById("pin-number").value;
         const amount = document.getElementById("add-amount").value;
-        const mainBalance = document.getElementById("main-balance");
+        const mainBalance = document.getElementById("main-balance").innerText;
 
 
 
@@ -14,8 +14,10 @@ document.getElementById("add-money-button").
 
             if (parseInt(accountNumber) === 1053886980001 && parseInt(pin) === 123) {
 
-                // only calculation added here
-
+                let convertedMainBalance = parseFloat(mainBalance)
+                const convertedAddAmount = parseFloat(amount)
+                convertedMainBalance = convertedMainBalance + convertedAddAmount
+                document.getElementById("main-balance").innerText=convertedMainBalance
 
             } else {
                 alert("Invalid Account || Invalid pin")
