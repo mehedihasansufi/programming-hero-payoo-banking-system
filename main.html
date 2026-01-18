@@ -50,22 +50,22 @@
         <p class="text-center text-xs">Cash-out</p>
       </div>
 
-      <div class="box border border-gray-400 rounded-xl p-2 flex flex-col justify-center gap-2">
+      <div id="transfer-money" class="box cursor-pointer border border-gray-400 rounded-xl p-2 flex flex-col justify-center gap-2">
         <img class="w-6 mx-auto" src="./assets/money1.png" alt="" />
         <p class="text-center text-xs">Transfer Money</p>
       </div>
 
-      <div class="box border border-gray-400 rounded-xl p-2 flex flex-col justify-center gap-2">
+      <div id="get-bonus" class="box cursor-pointer border border-gray-400 rounded-xl p-2 flex flex-col justify-center gap-2">
         <img class="w-6 mx-auto" src="./assets/bonus1.png" alt="" />
         <p class="text-center text-xs">Get Bonus</p>
       </div>
 
-      <div class="box border border-gray-400 rounded-xl p-2 flex flex-col justify-center gap-2">
+      <div id="pay-bill" class="box cursor-pointer border border-gray-400 rounded-xl p-2 flex flex-col justify-center gap-2">
         <img class="w-6 mx-auto" src="./assets/purse1.png" alt="" />
         <p class="text-center text-xs">Pay Bill</p>
       </div>
 
-      <div class="box border border-gray-400 rounded-xl p-2 flex flex-col justify-center gap-2">
+      <div id="transactions" class="box cursor-pointer border border-gray-400 rounded-xl p-2 flex flex-col justify-center gap-2">
         <img class="w-6 mx-auto" src="./assets/transaction1.png" alt="" />
         <p class="text-center text-xs">Transactions</p>
       </div>
@@ -126,7 +126,7 @@
     </section>
 
 
-    <!-- cash out -->
+    <!-- cash out section -->
 
      <section id="cash-out-container" class=" mt-6">
       <h2 class="font-bold">Cash Out</h2>
@@ -174,11 +174,57 @@
 
 
     <!-- transfer money -->
+
+  <section id="transfer-money-container" class=" mt-6">
+      <h2 class="font-bold">Transfer Money</h2>
+      <div class="hero-content flex-col lg:flex-row-reverse">
+        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-xl">
+
+          <!-- form -->
+
+          <form class="card-body rounded-full">
+            <fieldset class="fieldset">
+
+              
+
+              <!--User Account number -->
+
+              <label class="label text-base">User Account Number</label>
+              <input value="01768449468" id="transfer-money-account-number" type="number"
+                class="input bg-slate-200 focus:outline-none border-none text-center"
+                placeholder="Enter 11 digit account number" required />
+
+              <!-- Transfer Money -->
+
+              <label class="label text-base">Amount</label>
+              <input value="" id="transfer-money-amount" type="number"
+                class="input bg-slate-200 focus:outline-none border-none text-center" placeholder="Enter amount to withdraw"
+                required />
+
+              <!-- pin -->
+
+              <label class="label text-base">PIN</label>
+              <input value="123" id="transfer-money-pin-number" type=""
+                class="input bg-slate-200 focus:outline-none border-none outline-none hover:bg-slate-100 text-center"
+                placeholder="Enter 4 digit pin number" required />
+
+              <!-- transfer-money button -->
+
+              <button id="transfer-money-button" class="btn btn-neutral mt-2">
+              Send Now
+              </button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </section>
+
   </section>
 
   <script src="script/moneDisplay.js"></script>
   <script src="script/addMoney.js"></script>
   <script src="script/cashOut.js"></script>
+  <script src="script/transferMoney.js"></script>
 </body>
 
 </html>
