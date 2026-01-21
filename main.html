@@ -12,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
 
-  <body style="user-select: none;" class="bg-slate-800 ">
+  <body style="user-select: none" class="bg-slate-800">
     <section class="max-w-md min-h-screen mx-auto bg-gray-200 px-8">
       <header class="pt-6">
         <nav class="flex justify-between items-center">
@@ -242,7 +242,7 @@
 
                 <label class="label text-base">User Account Number</label>
                 <input
-                  value=""
+                  value="01768449468"
                   id="transfer-money-account-number"
                   type="number"
                   class="input bg-slate-200 focus:outline-none border-none text-center"
@@ -266,7 +266,7 @@
 
                 <label class="label text-base">PIN</label>
                 <input
-                  value=""
+                  value="123"
                   id="transfer-money-pin-number"
                   type=""
                   class="input bg-slate-200 focus:outline-none border-none outline-none hover:bg-slate-100 text-center"
@@ -307,8 +307,6 @@
                   required
                 />
 
-              
-               
                 <!-- transfer-money button -->
 
                 <button id="bouns-button" class="btn btn-neutral mt-2">
@@ -320,11 +318,9 @@
         </div>
       </section>
 
-
-
       <!-- pay bill section -->
 
-       <section id="pay-bill-container" class="mt-6">
+      <section id="pay-bill-container" class="mt-6">
         <h2 class="font-bold">Pay Bill</h2>
         <div class="hero-content flex-col lg:flex-row-reverse">
           <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-xl">
@@ -340,7 +336,7 @@
                   class="select bg-slate-200 focus:outline-none border-none w-full"
                 >
                   <option value="" disabled selected>Select payable</option>
-                  <option value="electricity">Electricity </option>
+                  <option value="electricity">Electricity</option>
                   <option value="gas">Gas</option>
                   <option value="water">Water</option>
                 </select>
@@ -391,7 +387,6 @@
           </div>
         </div>
       </section>
-
     </section>
 
     <script src="utilities/function.js"></script>
