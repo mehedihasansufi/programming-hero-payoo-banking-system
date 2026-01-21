@@ -4,7 +4,7 @@
 displaySetUp("cash-out-container", "none")
 displaySetUp("add-money-container", "none")
 displaySetUp("transfer-money-container", "none")
-displaySetUp("get-bonus-container", "none")
+displaySetUp("get-bonus-container", "block")
 displaySetUp("pay-bill-container", "none")
 
 
@@ -16,7 +16,7 @@ displaySetUp("pay-bill-container", "none")
 document.getElementById("add-money").
   addEventListener("click", function (event) {
 
-   
+
 
     displaySetUp("cash-out-container", "none")
     displaySetUp("transfer-money-container", "none")
@@ -46,12 +46,12 @@ document.getElementById("cash-out").addEventListener("click", function (event) {
 
 document.getElementById("transfer-money").addEventListener("click", function () {
 
-   displaySetUp("cash-out-container", "none")
-   displaySetUp("get-bonus-container", "none")
-   displaySetUp("add-money-container", "none")
-   displaySetUp("pay-bill-container", "none")
-   // mine
-   displaySetUp("transfer-money-container", "block")
+  displaySetUp("cash-out-container", "none")
+  displaySetUp("get-bonus-container", "none")
+  displaySetUp("add-money-container", "none")
+  displaySetUp("pay-bill-container", "none")
+  // mine
+  displaySetUp("transfer-money-container", "block")
 
 
 })
@@ -64,7 +64,7 @@ document.getElementById("get-bonus")
   .addEventListener("click", function (event) {
 
 
-   displaySetUp("cash-out-container", "none")
+    displaySetUp("cash-out-container", "none")
     displaySetUp("transfer-money-container", "none")
     displaySetUp("pay-bill-container", "none")
     displaySetUp("add-money-container", "none")
@@ -81,7 +81,7 @@ document.getElementById("pay-bill")
   .addEventListener("click", function (event) {
 
 
-  displaySetUp("cash-out-container", "none")
+    displaySetUp("cash-out-container", "none")
     displaySetUp("transfer-money-container", "none")
     displaySetUp("get-bonus-container", "none")
     displaySetUp("add-money-container", "none")
