@@ -1,18 +1,30 @@
 
-document.getElementById("cash-out-container").style.display = "none";
-document.getElementById("add-money-container").style.display = "none"
-document.getElementById("transfer-money-container").style.display="none"
+
+
+displaySetUp("cash-out-container", "none")
+displaySetUp("add-money-container", "none")
+displaySetUp("transfer-money-container", "none")
+displaySetUp("get-bonus-container", "none")
+displaySetUp("pay-bill-container", "none")
+
+
+
+
 
 // add money display block
 
 document.getElementById("add-money").
   addEventListener("click", function (event) {
 
-    document.getElementById("cash-out-container").style.display = "none";
-    document.getElementById("transfer-money-container").style.display = "none"
+   
 
+    displaySetUp("cash-out-container", "none")
+    displaySetUp("transfer-money-container", "none")
+    displaySetUp("get-bonus-container", "none")
+    displaySetUp("pay-bill-container", "none")
     // mine
-    document.getElementById("add-money-container").style.display = "block"
+
+    displaySetUp("add-money-container", "block")
 
   })
 
@@ -20,12 +32,13 @@ document.getElementById("add-money").
 
 document.getElementById("cash-out").addEventListener("click", function (event) {
 
-  document.getElementById("add-money-container").style.display = "none"
-  document.getElementById("transfer-money-container").style.display = "none"
-
-
+  displaySetUp("transfer-money-container", "none")
+  displaySetUp("get-bonus-container", "none")
+  displaySetUp("pay-bill-container", "none")
+  displaySetUp("add-money-container", "none")
   // mine
-  document.getElementById("cash-out-container").style.display = "block"
+  displaySetUp("cash-out-container", "block")
+
 })
 
 
@@ -33,10 +46,51 @@ document.getElementById("cash-out").addEventListener("click", function (event) {
 
 document.getElementById("transfer-money").addEventListener("click", function () {
 
-  document.getElementById("cash-out-container").style.display = "none";
-  document.getElementById("add-money-container").style.display = "none"
+   displaySetUp("cash-out-container", "none")
+   displaySetUp("get-bonus-container", "none")
+   displaySetUp("add-money-container", "none")
+   displaySetUp("pay-bill-container", "none")
+   // mine
+   displaySetUp("transfer-money-container", "block")
 
-  // mine
-  document.getElementById("transfer-money-container").style.display = "block"
 
 })
+
+
+
+// bouns coupon block
+
+document.getElementById("get-bonus")
+  .addEventListener("click", function (event) {
+
+
+   displaySetUp("cash-out-container", "none")
+    displaySetUp("transfer-money-container", "none")
+    displaySetUp("pay-bill-container", "none")
+    displaySetUp("add-money-container", "none")
+    // mine
+    displaySetUp("get-bonus-container", "block")
+
+
+  })
+
+
+// pay bill option
+
+document.getElementById("pay-bill")
+  .addEventListener("click", function (event) {
+
+
+  displaySetUp("cash-out-container", "none")
+    displaySetUp("transfer-money-container", "none")
+    displaySetUp("get-bonus-container", "none")
+    displaySetUp("add-money-container", "none")
+    // mine
+    displaySetUp("pay-bill-container", "block")
+
+
+  })
+
+
+
+// transactions
