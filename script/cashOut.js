@@ -15,7 +15,7 @@ document.getElementById("cash-out-button").
 
         if (agentNumber.length > 0 && withdrawAmount.length > 0 && pin.length > 0) {
 
-            if (parseInt(agentNumber) === 1053886980001 && parseInt(pin) === 123) {
+            if (agentNumber.length===11 && parseInt(pin) === 123) {
 
                 let convertedMainBalance = parseFloat(mainBalance)
                 const converWithdrawAmount = parseFloat(withdrawAmount)

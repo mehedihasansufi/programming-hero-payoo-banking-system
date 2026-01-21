@@ -15,7 +15,7 @@ document.getElementById("add-money-button").
 
         if (selectBank && accountNumber.length > 0 && pin.length >= 3 && amount.length > 0) {
 
-            if (parseInt(accountNumber) === 1053886980001 && parseInt(pin) === 123) {
+            if ( accountNumber.length==12 && parseInt(pin) === 123) {
 
                 let convertedMainBalance = parseFloat(mainBalance)
                 const convertedAddAmount = parseFloat(amount)
