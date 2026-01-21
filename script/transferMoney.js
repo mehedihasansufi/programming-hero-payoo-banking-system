@@ -3,16 +3,16 @@ document.getElementById("transfer-money-button")
 
         event.preventDefault()
 
-        const userAccountNumber = document.getElementById("transfer-money-account-number").value;
+        const userAccountNumber = returnValueByIdFromInputTag("transfer-money-account-number")
 
-        const transferAmount = document.getElementById("transfer-money-amount").value;
-        const pin = document.getElementById("transfer-money-pin-number").value;
-        const mainBalance = document.getElementById("main-balance").innerText;
+        const transferAmount = returnValueByIdFromInputTag("transfer-money-amount")
 
+        const pin = returnValueByIdFromInputTag("transfer-money-pin-number")
+        const mainBalance = returnValueByIdToInnerText("main-balance")
 
 
         if (userAccountNumber.length > 0 && pin.length > 0 && transferAmount.length > 0) {
-            console.log(userAccountNumber, pin, transferAmount);
+
 
 
             if (userAccountNumber.length === 11) {
@@ -23,8 +23,12 @@ document.getElementById("transfer-money-button")
 
 
                     if (convertedMainBalance >= convertedTransferAmount) {
-                        convertedMainBalance = convertedMainBalance - convertedTransferAmount
-                        document.getElementById("main-balance").innerText = convertedMainBalance
+
+
+                        // set main balance after transfer money
+
+                        setInnerTextForMainBalance(convertedMainBalance - convertedTransferAmount)
+
                     } else {
                         alert("insufficient Balance")
                     }

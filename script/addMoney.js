@@ -2,12 +2,15 @@ document.getElementById("add-money-button").
     addEventListener("click", function (event) {
 
         event.preventDefault()
-        const selectBank = document.getElementById("select-bank").value;
-        const accountNumber = document.getElementById("account-number").value;
-        const pin = document.getElementById("pin-number").value;
-        const amount = document.getElementById("add-amount").value;
-        const mainBalance = document.getElementById("main-balance").innerText;
 
+
+        const selectBank = returnValueByIdFromInputTag("select-bank")
+        const accountNumber = returnValueByIdFromInputTag("account-number")
+        const pin = returnValueByIdFromInputTag("pin-number")
+        const amount = returnValueByIdFromInputTag("add-amount")
+
+
+        const mainBalance = returnValueByIdToInnerText("main-balance")
 
 
         if (selectBank && accountNumber.length > 0 && pin.length >= 3 && amount.length > 0) {
@@ -16,8 +19,10 @@ document.getElementById("add-money-button").
 
                 let convertedMainBalance = parseFloat(mainBalance)
                 const convertedAddAmount = parseFloat(amount)
-                convertedMainBalance = convertedMainBalance + convertedAddAmount
-                document.getElementById("main-balance").innerText=convertedMainBalance
+
+                // set main balance after add money
+
+                setInnerTextForMainBalance(convertedMainBalance + convertedAddAmount)
 
             } else {
                 alert("Invalid Account || Invalid pin")

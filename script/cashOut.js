@@ -3,26 +3,34 @@
 document.getElementById("cash-out-button").
     addEventListener("click", function (event) {
         event.preventDefault()
-        const agentNumber = document.getElementById("cash-out-agent-number").value;
-        const withdrawAmount = document.getElementById("cash-out-withdraw").value;
-        const pin = document.getElementById("cash-out-pin-number").value;
-        const mainBalance = document.getElementById("main-balance").innerText;
+
+
+        const agentNumber = returnValueByIdFromInputTag("cash-out-agent-number")
+        const withdrawAmount = returnValueByIdFromInputTag("cash-out-withdraw")
+        const pin = returnValueByIdFromInputTag("cash-out-pin-number")
+
+        const mainBalance = returnValueByIdToInnerText("main-balance")
+
+
 
         if (agentNumber.length > 0 && withdrawAmount.length > 0 && pin.length > 0) {
 
             if (parseInt(agentNumber) === 1053886980001 && parseInt(pin) === 123) {
 
-                let convertedMainBalance=parseFloat(mainBalance)
-                const converWithdrawAmount=parseFloat(withdrawAmount)
+                let convertedMainBalance = parseFloat(mainBalance)
+                const converWithdrawAmount = parseFloat(withdrawAmount)
 
-              if(convertedMainBalance>=converWithdrawAmount){
-                 convertedMainBalance=convertedMainBalance-converWithdrawAmount
-               document.getElementById("main-balance").innerText=convertedMainBalance
-              }else{
-                alert("Insufficient Balance")
-              }
-                // console.log(typeof agentNumber, typeof withdrawAmount, typeof pin, typeof mainBalance)
-            }else{
+                if (convertedMainBalance >= converWithdrawAmount) {
+
+
+                    // set main balance after cash-out money
+
+                    setInnerTextForMainBalance(convertedMainBalance - converWithdrawAmount)
+                } else {
+                    alert("Insufficient Balance")
+                }
+
+            } else {
                 alert("please enter valid account number or valid pin number")
             }
 
