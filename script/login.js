@@ -1,8 +1,9 @@
 document.getElementById("log-in-btn")
     .addEventListener("click", function (event) {
         event.preventDefault()
-        const accountNumber = document.getElementById("account-number").value;
-        const pinNumber = document.getElementById("pin-number").value;
+        const accountNumber = returnValueByIdFromInputTag("account-number")
+        const pinNumber = returnValueByIdFromInputTag("pin-number")
+        
 
         if(!accountNumber || !pinNumber){
             alert("full fill the account number or pin number")
