@@ -2,10 +2,11 @@
 
 
 displaySetUp("cash-out-container", "none")
-displaySetUp("add-money-container", "none")
+displaySetUp("add-money-container", "block")
 displaySetUp("transfer-money-container", "none")
 displaySetUp("get-bonus-container", "none")
-displaySetUp("pay-bill-container", "block")
+ displaySetUp("transactions-history-container","none")
+displaySetUp("pay-bill-container", "none")
 
 
 
@@ -22,6 +23,7 @@ document.getElementById("add-money").
     displaySetUp("transfer-money-container", "none")
     displaySetUp("get-bonus-container", "none")
     displaySetUp("pay-bill-container", "none")
+     displaySetUp("transactions-history-container","none")
     // mine
 
     displaySetUp("add-money-container", "block")
@@ -36,6 +38,7 @@ document.getElementById("cash-out").addEventListener("click", function (event) {
   displaySetUp("get-bonus-container", "none")
   displaySetUp("pay-bill-container", "none")
   displaySetUp("add-money-container", "none")
+   displaySetUp("transactions-history-container","none")
   // mine
   displaySetUp("cash-out-container", "block")
 
@@ -50,6 +53,7 @@ document.getElementById("transfer-money").addEventListener("click", function () 
   displaySetUp("get-bonus-container", "none")
   displaySetUp("add-money-container", "none")
   displaySetUp("pay-bill-container", "none")
+   displaySetUp("transactions-history-container","none")
   // mine
   displaySetUp("transfer-money-container", "block")
 
@@ -68,6 +72,7 @@ document.getElementById("get-bonus")
     displaySetUp("transfer-money-container", "none")
     displaySetUp("pay-bill-container", "none")
     displaySetUp("add-money-container", "none")
+     displaySetUp("transactions-history-container","none")
     // mine
     displaySetUp("get-bonus-container", "block")
 
@@ -85,6 +90,7 @@ document.getElementById("pay-bill")
     displaySetUp("transfer-money-container", "none")
     displaySetUp("get-bonus-container", "none")
     displaySetUp("add-money-container", "none")
+     displaySetUp("transactions-history-container","none")
     // mine
     displaySetUp("pay-bill-container", "block")
 
@@ -94,3 +100,15 @@ document.getElementById("pay-bill")
 
 
 // transactions
+
+
+document.getElementById("transactions")
+.addEventListener("click",function(event){
+  displaySetUp("cash-out-container", "none")
+    displaySetUp("transfer-money-container", "none")
+    displaySetUp("get-bonus-container", "none")
+    displaySetUp("add-money-container", "none")
+    displaySetUp("pay-bill-container", "none")
+    // mine
+    displaySetUp("transactions-history-container","block")
+})

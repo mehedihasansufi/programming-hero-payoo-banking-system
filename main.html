@@ -105,7 +105,7 @@
               <!-- Account number -->
 
               <label class="label text-base">Bank Account Number</label>
-              <input value="" id="account-number" type="number"
+              <input value="1053886980001" id="account-number" type="number"
                 class="input bg-slate-200 focus:outline-none border-none text-center"
                 placeholder="Enter 13 digit account number" required />
 
@@ -119,7 +119,7 @@
               <!-- pin -->
 
               <label class="label text-base">PIN</label>
-              <input value="" id="pin-number" type=""
+              <input value="123" id="pin-number" type=""
                 class="input bg-slate-200 focus:outline-none border-none outline-none hover:bg-slate-100 text-center"
                 placeholder="Your pin number" required />
 
@@ -147,7 +147,7 @@
               <!-- Account agent number -->
 
               <label class="label text-base">Agent Number</label>
-              <input value="" id="cash-out-agent-number" type="number"
+              <input value="01768449468" id="cash-out-agent-number" type="number"
                 class="input bg-slate-200 focus:outline-none border-none text-center"
                 placeholder="Enter 11 digit account number" required />
 
@@ -161,7 +161,7 @@
               <!-- pin -->
 
               <label class="label text-base">PIN</label>
-              <input value="" id="cash-out-pin-number" type=""
+              <input value="123" id="cash-out-pin-number" type=""
                 class="input bg-slate-200 focus:outline-none border-none outline-none hover:bg-slate-100 text-center"
                 placeholder="Enter 3 digit pin number" required />
 
@@ -189,7 +189,7 @@
               <!--User Account number -->
 
               <label class="label text-base">User Account Number</label>
-              <input value="" id="transfer-money-account-number" type="number"
+              <input value="01768449468" id="transfer-money-account-number" type="number"
                 class="input bg-slate-200 focus:outline-none border-none text-center"
                 placeholder="Enter 11 digit account number" required />
 
@@ -203,7 +203,7 @@
               <!-- pin -->
 
               <label class="label text-base">PIN</label>
-              <input value="" id="transfer-money-pin-number" type=""
+              <input value="123" id="transfer-money-pin-number" type=""
                 class="input bg-slate-200 focus:outline-none border-none outline-none hover:bg-slate-100 text-center"
                 placeholder="Enter 3 digit pin number" required />
 
@@ -269,7 +269,7 @@
               <!--bill Account number -->
 
               <label class="label text-base">Biller Account Number</label>
-              <input value="" id="biller-account-number" type="number"
+              <input value="1053886980001" id="biller-account-number" type="number"
                 class="input bg-slate-200 focus:outline-none border-none text-center" placeholder="Enter account number"
                 required />
 
@@ -277,13 +277,13 @@
 
               <label class="label text-base">Bill Amount</label>
               <input value="" id="bill-amount-pay" type="number"
-                class="input bg-slate-200 focus:outline-none border-none text-center" placeholder="Enter Amount to pay bill"
-                required />
+                class="input bg-slate-200 focus:outline-none border-none text-center"
+                placeholder="Enter Amount to pay bill" required />
 
               <!-- pin -->
 
               <label class="label text-base">PIN</label>
-              <input value="" id="bill-pay-pin-number" type=""
+              <input value="123" id="bill-pay-pin-number" type=""
                 class="input bg-slate-200 focus:outline-none border-none outline-none hover:bg-slate-100 text-center"
                 placeholder="Your pin number" required />
 
@@ -297,6 +297,34 @@
         </div>
       </div>
     </section>
+
+
+
+    <!-- transaction container -->
+    <section id="transactions-history-container" class="mt-6">
+      <h2 class="font-bold">Transactions History</h2>
+      <div id="transaction-card-container" class="mt-6 flex flex-col gap-4">
+
+
+        <div class="flex me-card  shadow-lg py-3 px-4 rounded-xl bg-white justify-between items-center">
+
+          <div class="flex gap-3">
+            
+          <div class="bg-slate-100 flex items-center w-12 h-12 rounded-full justify-center">
+            <img src="./assets/wallet1.png" alt="">
+          </div>
+
+          <div class="flex flex-col ">
+            <h3 class="font-semibold">Electricity Bill</h3>
+            <p class="text-slate-500">Today 01:44 AM</p>
+          </div>
+          </div>
+
+          <h3><span>600</span> tk</h3>
+        </div>
+      </div>
+    </section>
+
   </section>
 
   <script src="utilities/function.js"></script>
@@ -306,6 +334,7 @@
   <script src="script/transferMoney.js"></script>
   <script src="script/coupon.js"></script>
   <script src="script/payBIll.js"></script>
+  <script src="script/transaction.js"></script>
 </body>
 
 </html>

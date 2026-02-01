@@ -18,12 +18,17 @@ document.getElementById("pay-bill-button")
         let convertedMainBalance=parseFloat(mainBalance)
         const convertedAddAmount=parseFloat(billAmount)
 
-        // set main balance after paying bill
+     
 
 
         if(convertedMainBalance>=convertedAddAmount){
 
+             // set main balance after paying bill
             setInnerTextForMainBalance(convertedMainBalance-convertedAddAmount)
+
+         // transaction history
+
+         transactionsHistoryAdd(`${billOption}`,convertedAddAmount)
         }else{
             alert("insufficient balance ")
         }

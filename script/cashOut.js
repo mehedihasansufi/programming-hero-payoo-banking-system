@@ -26,6 +26,10 @@ document.getElementById("cash-out-button").
                     // set main balance after cash-out money
 
                     setInnerTextForMainBalance(convertedMainBalance - converWithdrawAmount)
+
+                    // transaction history
+
+                    transactionsHistoryAdd(`Cash-Out`,converWithdrawAmount)
                 } else {
                     alert("Insufficient Balance")
                 }

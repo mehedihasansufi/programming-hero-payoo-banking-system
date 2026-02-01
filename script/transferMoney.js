@@ -29,6 +29,10 @@ document.getElementById("transfer-money-button")
 
                         setInnerTextForMainBalance(convertedMainBalance - convertedTransferAmount)
 
+                        // transactios history added
+
+                        transactionsHistoryAdd(`Send Money`,convertedTransferAmount)
+
                     } else {
                         alert("insufficient Balance")
                     }
