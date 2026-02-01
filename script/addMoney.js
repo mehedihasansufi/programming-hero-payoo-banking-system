@@ -13,7 +13,7 @@ document.getElementById("add-money-button").
         const mainBalance = returnValueByIdToInnerText("main-balance")
 
 
-        if (selectBank && accountNumber.length > 0 && pin.length >= 3 && amount.length > 0) {
+        if (selectBank && accountNumber.length > 0 && pin.length >0 && amount.length > 0) {
 
             if (parseInt(accountNumber) === 1053886980001 && parseInt(pin) === 123) {
 

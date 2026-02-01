@@ -4,8 +4,8 @@
 displaySetUp("cash-out-container", "none")
 displaySetUp("add-money-container", "none")
 displaySetUp("transfer-money-container", "none")
-displaySetUp("get-bonus-container", "block")
-displaySetUp("pay-bill-container", "none")
+displaySetUp("get-bonus-container", "none")
+displaySetUp("pay-bill-container", "block")
 
 
 
