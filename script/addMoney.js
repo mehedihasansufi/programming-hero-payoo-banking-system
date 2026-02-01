@@ -25,7 +25,7 @@ document.getElementById("add-money-button").
                 setInnerTextForMainBalance(convertedMainBalance + convertedAddAmount)
 
                 // transaction history added
-                transactionsHistoryAdd(`add-money ${selectBank}`,convertedAddAmount)
+                transactionsHistoryAdd(`Add Money ${selectBank}`,convertedAddAmount)
 
             } else {
                 alert("Invalid Account || Invalid pin")
